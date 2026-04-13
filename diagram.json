@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Masana Mathonsi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -147, "left": -35.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 77.4, "left": -67.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -70.8, "left": -5.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -70.8,
+      "left": 61.4,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -70.8,
+      "left": 119,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 4.8,
+      "left": 47.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 4.8,
+      "left": 105.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 4.8,
+      "left": -19.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "uno:13", "bb1:4b.g", "red", [ "v-28.8", "h-38" ] ],
+    [ "uno:12", "bb1:11b.g", "gold", [ "v-28.8", "h19.7" ] ],
+    [ "uno:11", "bb1:17b.g", "green", [ "v-19.2", "h67.8" ] ],
+    [ "uno:5V", "bb1:bn.25", "red", [ "v28.7", "h224.6" ] ],
+    [ "led1:A", "bb1:4b.f", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:3b.f", "", [ "$bb" ] ],
+    [ "led2:A", "bb1:11b.f", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:10b.f", "", [ "$bb" ] ],
+    [ "led3:A", "bb1:17b.f", "", [ "$bb" ] ],
+    [ "led3:C", "bb1:16b.f", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:10b.g", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:bp.8", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:16b.g", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:bp.13", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:3b.g", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:bp.2", "", [ "$bb" ] ],
+    [ "uno:GND.2", "bb1:bp.25", "black", [ "v19.1", "h205.5", "v-259.2" ] ]
+  ],
+  "dependencies": {}
+}
